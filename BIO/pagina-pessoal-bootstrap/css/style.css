@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body {
+    font-family: 'Raleway';
+}
+
+.avatar {
+    max-width: 150px;
+    vertical-align: middle;
+}
+
+.side-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #303f9f;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.name {
+    font-family: 'Abril Fatface';
+    color: white;
+}
+
+.about {
+    color: white;
+}
+
+.social-media-list {
+    background-color: #303f9f;
+    color: white;
+}
+
+a, a:visited {
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+    color: silver;
+    text-decoration: none;
+}
+
+.list-group-item {
+    background-color: #303f9f;
+}
+
+.resume-content {
+    margin-bottom: 30px;
+}
+
+.resume-section {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.resume-section-title {
+    font-weight: bold;
+    color: #303f9f;
+}
+
+.resume-section-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.job-title, .degree, .project {
+    font-weight: bold;
+}
+
+.company, .institute, .location {
+    font-style: italic;
+    color: #303f9f;
+}
+
+.progress-bar {
+    background-color: #303f9f;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin-bottom: 0;
+}

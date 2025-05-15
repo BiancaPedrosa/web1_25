@@ -1,0 +1,28 @@
+<html>
+<head>
+       <title>Corversor!</title>
+	   <link rel="stylesheet" type="text/css" href="conversor.css"></link>
+	   <script language="javascript" src="conversor.js"></script>
+</head>
+<body>
+       <h1 align="center">Conversor de unidades de comprimento</h1>
+	   <form name="ficha">
+		Converter:
+		<input type='text' name='quantia'>
+		<select name="de">
+		<option  class="verde" value="">escolher</option>
+		<option  class="verde"value="cm">cm</option>
+		<option  class="verde"value="inch">in</option>
+		<option  class="verde"value="ft">ft</option>
+		</select>
+		<input type='button' name='converte' value = " ==> " onclick='comprimento()'/>
+		<input type='text' name='resultado' disabled />
+		<select name="para">
+		<option class="azul" value="">escolher</option>
+		<option class="azul"value="cm">cm</option>
+		<option class="azul"value="inch">in</option>
+		<option class="azul"value="ft">ft</option>
+		</select>
+	</form>
+</body>
+</html>

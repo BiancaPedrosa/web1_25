@@ -1,0 +1,28 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<title>Quiz WEB1</title>
+		<meta charset="utf-8">
+		<link href="css/estilo.css" rel="stylesheet">
+	</head>
+	<body onload="loadDoc()">
+		<img src="./img/quiz.png" alt="Quiz logo">
+		<h3 id="result">Quiz Results</h3>
+		<nav class="pagination">
+			<a id="link1" href="#question1" onclick=exibirQuestao(1)>1</a>
+			<a id="link2" href="#question2" onclick=exibirQuestao(2)>2</a>
+			<a id="link3" href="#question3" onclick=exibirQuestao(3)>3</a>	
+			<a id="link4" href="#question4" onclick=exibirQuestao(4)>4</a>
+			<a id="link5" href="#question5" onclick=exibirQuestao(5)>5</a>
+		</nav>
+		<form id="formQuestionary">	
+			<div class="pagination">
+					<button id="btAvalia" type="button" onclick="avalia()">Avaliar questões</button>
+			</div>
+		</form>
+			
+		<script src="js/loadXMLDOM.js"></script>
+		<script src="js/avaliaDOM.js"></script>
+		<script src="js/pagination.js"></script>
+	</body>
+</html>

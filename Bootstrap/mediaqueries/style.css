@@ -1,0 +1,47 @@
+.cartao {
+   background-color: lightgray;
+   color: black;
+   padding: 20px;
+   text-align: center;
+   border: 1px solid gray;
+   margin: 20px;
+}
+
+/* Estilos para telas menores que 600 pixels de largura (celulares) */
+@media (max-width: 599px) {
+   .cartao {
+       background-color: lightblue;
+       color: white;
+   }
+
+   .cartao p {
+       font-size: 1.2em;
+       content: "Olá de um celular!"; /* Isso não funciona em <p>, usaremos JavaScript para simplificar para iniciantes */
+   }
+}
+
+/* Estilos para telas entre 600 pixels e 999 pixels de largura (tablets) */
+@media (min-width: 600px) and (max-width: 999px) {
+   .cartao {
+       background-color: lightgreen;
+       color: darkgreen;
+   }
+
+   .cartao p {
+       font-size: 1.5em;
+       content: "Saudações de um tablet!"; /* Mesma observação sobre o content */
+   }
+}
+
+/* Estilos para telas maiores que 1000 pixels de largura (desktops) */
+@media (min-width: 1000px) {
+   .cartao {
+       background-color: lightcoral;
+       color: white;
+   }
+
+   .cartao p {
+       font-size: 1.8em;
+       content: "Bem-vindo ao desktop!"; /* Mesma observação sobre o content */
+   }
+}

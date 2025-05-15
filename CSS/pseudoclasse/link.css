@@ -1,0 +1,4 @@
+a:link {color: green;} /* link nao visitado */
+a:visited {color: orange;} /* link visitado */
+a:hover {color: red;} /* apontado pelo mouse */
+a:active {background-color: yellow;} /* clica e segura o mouse */

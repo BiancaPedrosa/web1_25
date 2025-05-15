@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Doce Viver</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/navegation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <div class="image"></div>
+    <nav>
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="sobreNos.html">Sobre nós</a>
+        <a class="btn" href="cardapio.html">Cardápio</a>
+        <a class="btn" href="galeria.html">Galeria</a>
+        <a class="btn" href="ifsp.html">IFSP</a>
+    </nav>
+</div>
+
+<h1>Cardápio</h1>
+<div id="salgados">
+    <h2>Salgados</h2>
+    <table id="table-salgados"></table>
+</div>
+<div id="doces">
+    <h2>Doces</h2>
+    <table id="table-doces"></table>
+</div>
+<div id="bebidas">
+    <h2>Bebidas</h2>
+    <table id="table-bebidas"></table>
+</div>
+<div id="adicionar-item">
+    <h2>Adicionar outro item ao pedido</h2>
+    <form id="form-adicionar-item">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="Salgados">Salgados</option>
+            <option value="Doces">Doces</option>
+            <option value="Bebidas">Bebidas</option>
+        </select><br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco"><br><br>
+        <button type="submit" class="btn">Adicionar</button>
+    </form>
+</div>
+<div id="pedido">
+    <h2>Pedido</h2>
+    <ul id="itens-selecionados"></ul>
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <!--
+
+    <p>Total das Comandas: R$ <span id="total-comandas">0.00</span></p>
+        -->
+    <p>Comanda: <span id="comanda">1</span></p>
+    <button id="fechar-comanda" class="btn">Fechar Comanda</button>
+    <button id="gerar-comprovante" class="btn">Gerar Comprovante</button>
+    <button id="download-comprovante" class="btn">Download Comprovante</button>
+
+
+</div>
+
+<div id="comprovante" style="display: none;">
+    <h2>Comprovante</h2>
+    <textarea id="comprovante-text" rows="10" cols="50" readonly></textarea>
+</div>
+
+<footer>
+    <div class="footer-basic">
+        <div class="social">
+            <a href="https://www.instagram.com/doce_viver_sh/?igsh=d21oNHhyb253dmZv"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=seu-numero-de-telefone"><i class="icon ion-social-whatsapp"></i></a>
+            <a href="https://maps.app.goo.gl/xmEBu6z6M5VTdjGd9"><i class="fa fa-map-marker"></i></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Início</a></li>
+            <li class="list-inline-item"><a href="sobreNos.html">Sobre nós</a></li>
+            <li class="list-inline-item"><a href="cardapio.html">Cardápio</a></li>
+            <li class="list-inline-item"><a href="galeria.html">Galeria</a></li>
+            <li class="list-inline-item"><a href="ifsp.html">IFSP</a></li>
+        </ul>
+        <p class="copyright">Doce Viver © 2024</p>
+    </div>
+</footer>
+
+<script src="JS/cardapio.js"></script>
+</body>
+</html>

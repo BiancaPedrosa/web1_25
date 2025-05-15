@@ -1,0 +1,21 @@
+.pai {
+			border: 1px solid #0AB4E2;
+    /** position relative faz com q o div filho referencie sua posição pelo div pai. **/
+			position: relative; 
+			width: 400px;
+			height: 400px;
+			padding: 15px;
+		}
+		
+.filho {
+  border: 1px solid black;
+  width: 311px;
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+}
+
+.filho p {
+  color: red;
+  font: 14px arial, verdana;
+}

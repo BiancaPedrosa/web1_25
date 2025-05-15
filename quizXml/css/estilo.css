@@ -1,0 +1,57 @@
+
+ol.answer  {list-style-type:lower-latin;}
+
+li.correct {color:green;}
+
+li.wrong   {color: red;}
+
+#result    {color: blue;}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding-bottom: 12px;
+}
+
+
+.pagination a {
+  color: white;
+  float: left;
+  margin: 2px;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}
+
+.pagination a:active{
+  opacity: 0.6;
+}
+
+.pagination a:hover {
+  background-color: silver;
+}
+			
+.pagination a:visited {
+  background-color:lightgreen;
+  text-decoration: none;
+}
+img{
+  width: 50%;
+}
+body{
+  width: 70%;
+  margin:auto;
+  background-color: honeydew;
+}
+#btAvalia{
+  margin-left:0 ;
+  margin-right:0;
+}
+h1{
+  background-color: lightgreen;
+  width: 50%;
+  text-align: center;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      input,
+      select {
+        display: block;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+    <script>
+      // A função abaixo acessa uma api e recebe todos os países do mundo em formato json.
+      const getCountries = () => {
+        let url = "https://restcountries.com/v3.1/all";
+        let html = "";
+        fetch(url)
+          .then((response) => response.json())
+          .then((json) => {
+            json.sort((a, b) => (a.name.common > b.name.common ? 1 : -1));
+            for (let i = 0; i < json.length; i++) {
+              html +=
+                '<option value="' +
+                json[i].name.common +
+                '">' +
+                json[i].name.common +
+                "</option>";
+            }
+            let select = document.getElementById("pais");
+            select.innerHTML = html;
+          })
+          .catch((erro) => {
+            let div = document.getElementById("pais");
+            console.log(erro);
+            div.innerHTML = "Página Inexistente.";
+          });
+      };
+
+      // A função abaixo acessa uma api e recebe todos os estados do Brasil em formato json.
+      const getStates = () => {
+        let url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
+        let html = "";
+        fetch(url)
+          .then((response) => response.json())
+          .then((json) => {
+            json.sort((a, b) => (a.nome > b.nome ? 1 : -1));
+            for (let i = 0; i < json.length; i++) {
+              html +=
+                '<option value="' +
+                json[i].sigla +
+                '">' +
+                json[i].nome +
+                "</option>";
+            }
+            let div = document.getElementById("state");
+            div.innerHTML = html;
+          })
+          .catch((erro) => {
+            let div = document.getElementById("state");
+            console.log(erro);
+            div.innerHTML = "Página Inexistente.";
+          });
+      };
+
+      // A função abaixo acessa uma api e recebe todas as cidades de um determinado estado em formato json.
+      const getCities = () => {
+        //https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios
+        let state = document.getElementById("state").value;
+        let url =
+          "https://servicodados.ibge.gov.br/api/v1/localidades/estados/" +
+          state +
+          "/municipios";
+        let html = "";
+        fetch(url)
+          .then((response) => response.json())
+          .then((json) => {
+            for (let i = 0; i < json.length; i++) {
+              // html += json[i].nome + "-" + json[i].sigla + "<br>";
+              html +=
+                '<option value="' + json[i].nome +'">' +
+                json[i].nome +
+                "</option>";
+            }
+            let div = document.getElementById("city");
+            div.innerHTML = html;
+          })
+          .catch((erro) => {
+            let div = document.getElementById("estados");
+            console.log(erro);
+            div.innerHTML = "Página Inexistente.";
+          });
+      };
+    </script>
+  </head>
+
+  <body onload="getCountries(); getStates();">
+    <form>
+      <input type="text" id="nome" placeholder="Nome" />
+      <input type="date" id="dataNasc" placeholder="Data de Nascimento" />
+      <p id="message"></p>
+      <select name="pais" id="pais"></select>
+      <select name="state" id="state" onchange="getCities();"></select>
+      <select name="city" id="city"></select>
+      <input type="text" id="bairro" placeholder="Bairro" />
+      <input type="text" id="rua" placeholder="Rua" />
+    </form>
+    <script type="text/javascript">
+      document
+        .getElementById("dataNasc")
+        .addEventListener("input", function (e) {
+          const dataNascimento = e.target.value;
+          console.log("Data de Nascimento", dataNascimento);
+
+          // let date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/;
+          let date_regex = /(\d{4})[-.\/](\d{2})[-.\/](\d{2})/;
+          // var testDate = "03/17/21"
+          if (date_regex.test(dataNascimento)) {
+            document.getElementById("message").innerHTML =
+              "Data está no formato dd/mm/yy format";
+          } else {
+            document.getElementById("message").innerHTML = "Data Inválida";
+          }
+          // if (productName.length > 50) {
+          //     console.log('O nome do produto deve ter no máximo 50 caracteres');
+          //     document.getElementById('productname-error').style.display = "block";
+          //     checkForm.productName = false;
+          // } else {
+          //     document.getElementById('productname-error').style.display = "none";
+          //     checkForm.productName = true;
+          // }
+          // enableButton();
+        });
+    </script>
+  </body>
+</html>

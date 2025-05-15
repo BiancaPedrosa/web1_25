@@ -1,0 +1,69 @@
+<html>
+<head>
+       <title>Corversor!</title>
+	   <link rel="stylesheet" type="text/css" href="conv.css">
+	   
+	   </link>
+	   <script language="javascript" src="conv.js"></script>
+</head>
+<body>
+       <h1 align="center"class="prata">Conversor de moedas</h1>
+	   <h3 align="center" class="azul">Entre e divirta-se</h3>
+        <form
+		name="ficha"
+		action="none.php"
+ 		method="post">
+		
+		
+		
+		De:
+		<select name="Moedax">
+		<option  class="preto" value="Dolar">Dolar</option>
+		<option  class="preto"value="Euro">Euro</option>
+		<option class="preto"value="Real">Real</option>
+		<option  class="preto" value="Dinar Libia">Dinar Libia</option>
+		<option  class="preto"value="Dolar Australiano">Dolar Australiano</option>
+		<option class="preto"value="Dolar Brunei">Dolar Brunei</option>
+		<option  class="preto" value="Iene">Iene</option>
+		<option  class="preto"value="Bath Tailandia">Bath Tailandia</option>
+		<option class="preto"value="Cedi Gana">Cedi Gana</option>
+		<option  class="preto" value="Kuna Croacia">Kuna Croacia</option>
+		<option  class="preto"value="Franco Suiço">Franco Suiço</option>
+		<option class="preto"value="Gourde Haiti">Gourde Haiti</option>
+		<option  class="preto" value="Guilder Antilha">Guilder Antilha</option>
+		<option  class="preto"value="Rupia Nepal">Rupia Nepal</option>
+		<option class="preto"value="Rial Catar">Rial Catar</option>
+		</select>
+		Para:
+		<select name="Moeday">
+		<option class="azul"value="Dolar">Dolar</option>
+		<option class="azul"value="Euro">Euro</option>
+		<option class="azul"value="Real">Real</option>
+		<option  class="azul" value="Dinar Libi">Dinar Libia</option>
+		<option  class="azul"value="Dolar Australiano">Dolar Australiano</option>
+		<option class="azul"value="Dolar Brunei">Dolar Brunei</option>
+		<option  class="azul" value="Iene">Iene</option>
+		<option  class="azul"value="Bath Tailandia">Bath Tailandia</option>
+		<option class="azul"value="Cedi Gana">Cedi Gana</option>
+		<option  class="azul" value="Kuna Croacia">Kuna Croacia</option>
+		<option  class="azul"value="Franco Suiço">Franco Suiço</option>
+		<option class="azul"value="Gourde Haiti">Gourde Haiti</option>
+		<option  class="azul" value="Guilder Antilha">Guilder Antilha</option>
+		<option  class="azul"value="Rupia Nepal">Rupia Nepal</option>
+		<option class="azul"value="Rial Catar">Rial Catar</option>
+		</select></br>
+		Quantia:
+		<input type='text' name='Quantia'> 
+		<input type="button" name="calcular" value="calcular" onclick="convertermoeda()"/>
+		<input type="reset" name="cancela" value="Limpa dados"/></BR></BR>
+		Resultado:
+		<input type='text' name='resultado' disabled="disabled"/>
+		<h4 class="cinza" align="left">Data de cotação utilizada:13/02/2012</h4>
+		<h3><a href="http://economia.uol.com.br/cotacoes/">Aproveite e confira a cotação do mercado internacional</h3>
+		<h3><a href="http://pt.wikipedia.org/wiki/Dinheiro">Conheça a historia do dinheiro</h3>
+		
+		
+		
+		</form>
+</body>
+</html>

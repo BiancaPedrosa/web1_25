@@ -1,0 +1,66 @@
+section {
+    background-color: rgb(245, 243, 243);
+}
+
+section.destaque {
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 245, 253), rgb(54, 184, 194), rgb(22, 165, 175));
+    height: 280px;
+}
+
+h1.titulo {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 45px;
+}
+
+h2.titulo-secao {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 30px;
+    background-color: rgb(169, 255, 255);
+}
+
+h3 {
+    font-family: monospace;
+}
+
+h2 {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+p {
+    font-family: monospace;
+    color: rgb(65, 65, 65);
+}
+
+img.avatar {
+    border-radius: 50%;
+}
+
+div#avatar {
+    float: left;
+}
+
+ul {
+    background-color: rgb(245, 243, 243);
+    padding: 10px;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    font-family: 'Century Gothic', sans-serif;
+    color: black;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+  }
+
+li a:hover {
+    background-color: rgb(169, 255, 255);
+}
+
+footer {
+    background-color: rgb(224, 223, 223);
+    text-align: center;
+}

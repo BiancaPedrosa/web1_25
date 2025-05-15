@@ -1,0 +1,13 @@
+/* CSS display examples */
+
+.block-example span,
+.inline-example span,
+.inline-block-example span, 
+.table-example span { border: 2px solid red; width: 30%; }
+
+.block-example span { display: block; }
+.inline-example span { display: inline; }
+.inline-block-example span { display: inline-block; }
+
+.table-example { display: table; width: 100%; border-collapse: collapse; }
+.table-cell-example span { display: table-cell; }

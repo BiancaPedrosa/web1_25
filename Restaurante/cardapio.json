@@ -1,0 +1,91 @@
+{
+    "CATALOG": {
+       "PRODUTOS": [
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Pão na chapa",
+        "PRECOS": "R$4,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Pão de queijo",
+        "PRECOS": "R$5,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Pão com queijo",
+        "PRECOS": "R$10,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Misto quente",
+        "PRECOS": "R$15,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Salgado assado",
+        "PRECOS": "R$9,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Salgado frito",
+        "PRECOS": "R$8,00"
+       },
+       {
+        "CATEGORIAS": "Salgados",
+        "COMIDAS": "Fatia de tortas salgadas",
+        "PRECOS": "R$10,00"
+       },
+       {
+        "CATEGORIAS": "Doces",
+        "COMIDAS": "Fatia bolos",
+        "PRECOS": "R$10,00"
+       },
+       {
+        "CATEGORIAS": "Doces",
+        "COMIDAS": "Fatia de tortas doces",
+        "PRECOS": "R$10,00"
+       },
+       {
+        "CATEGORIAS": "Doces",
+        "COMIDAS": "Pão de mel",
+        "PRECOS": "R$8,00"
+       },
+       {
+        "CATEGORIAS": "Doces",
+        "COMIDAS": "Cone recheado",
+        "PRECOS": "R$10,00"
+       },
+       {
+        "CATEGORIAS": "Doces",
+        "COMIDAS": "Trufinhas",
+        "PRECOS": "R$12,00"
+       },
+       {
+        "CATEGORIAS": "Bebidas",
+        "COMIDAS": "Café espresso",
+        "PRECOS": "R$5,00"
+       },
+       {
+        "CATEGORIAS": "Bebidas",
+        "COMIDAS": "Cappuccino",
+        "PRECOS": "R$7,00"
+       },
+       {
+        "CATEGORIAS": "Bebidas",
+        "COMIDAS": "Sucos",
+        "PRECOS": "R$8,00"
+       },
+       {
+        "CATEGORIAS": "Bebidas",
+        "COMIDAS": "Água",
+        "PRECOS": "R$5,00"
+       },
+       {
+        "CATEGORIAS": "Bebidas",
+        "COMIDAS": "Refrigerante",
+        "PRECOS": "R$6,00"
+       }
+ ]
+ }
+ }

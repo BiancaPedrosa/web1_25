@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Conversor</title>
+     <style>
+          #resultado{
+               background-color: rgb(0, 255, 200);
+          }
+          body{
+               width: 50%; /*largura de metade da tela */
+               margin: auto;/* centralizar*/
+          }
+          #cambio{
+               text-align: center;
+          }
+          #conversor>fieldset {
+               text-align: center;
+
+          }
+     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+</head>
+<body onLoad="mostraData()">
+     <form id="cambio">
+          <fieldset>
+               <legend>Câmbio</legend>
+               <p>Cotação das moedas em R$ </p>
+               <p id = "dataAtual"></p>
+               <label for="dolar"><i class="fa fa-dollar"></i>
+                    <input type="number" id="dolar"  value=5  min=5 max=10 step=0.1 onchange="calcular()">
+               </label>
+          
+               <label for="euro"><i class="fa fa-euro"></i>
+                    <input type="number" id="euro" value=5.5  min=5 max=10 step=0.1 value="5.5" onchange="calcular()">
+               </label>
+               <button name="btAtualiza" id="btAtualizar" onclick="calcular()">🔄</button>
+          </fieldset>
+     </form>
+     <form id="conversor">
+          <Fieldset>
+            <legend>Conversor</legend>
+               <select id="de" onchange="calcular()">
+                    <option value="BR">🇧🇷 Real</option>
+                    <option value="US">🇺🇸 Dolar</option>
+                    <option value="EU">🇪🇺 Euro</option>
+               </select>
+               <input id="quantia" size="10" value="1" onchange="calcular()">
+               
+               <select id="para" onchange="calcular()">  
+                    <option value="US">🇺🇸&emsp;Dolar</option>
+                    <option value="BR">🇧🇷&emsp;Real</option>
+                    <option value="EU">🇪🇺&emsp;Euro</option>
+               </select>
+               <label for="resultado">
+                    <input id="resultado" size=10 readonly>
+               </label>
+               <button name="btInverter" id="btInverter" onclick="inverter()">🔁</button>
+          </Fieldset>
+      <script>
+          document.getElementById("btAtualizar").addEventListener("click", function(event){
+               event.preventDefault()
+          });
+          document.getElementById("btInverter").addEventListener("click", function(event){
+               event.preventDefault()
+          });
+          function inverter(){           
+               let aux=conversor.de.value;
+               conversor.de.value=conversor.para.value;
+               conversor.para.value=aux;
+               calcular();
+          }
+          function atualizar(){
+               calcular();
+          }
+          function calcular(){
+               let de    =  document.getElementById("de").value;
+               let para  = document.getElementById("para").value;
+               let dolar = document.getElementById("dolar").value;
+               let euro  = document.getElementById("euro").value;
+               let quantia = document.getElementById("quantia").value;
+               let resultado = 0.00;
+
+               if (de=="US"){
+                    if (para=="BR"){
+                         resultado= quantia * dolar;
+                    }
+                    else{
+                         resultado= quantia * (dolar/euro);
+                    }
+               }
+               if (de=="BR"){
+                    if (para=="US"){
+                         resultado = quantia / dolar;
+                    }
+                    else{
+                         resultado = quantia / euro;
+                    }
+               }
+               if (de=="EU"){
+                    if (para=="US"){
+                         resultado = quantia * (euro/dolar);
+                    }
+                    else{
+                         resultado = quantia * euro;
+                    }
+               } 
+               document.getElementById("resultado").value=resultado.toFixed(2);
+          }
+          function mostraData(){
+               hoje=new Date();
+               document.getElementById("dataAtual").innerHTML=hoje.getDate()+ '/'+ (hoje.getMonth()+1)+"/"+hoje.getFullYear();
+          }
+      </script>
+     </form>
+</html>
