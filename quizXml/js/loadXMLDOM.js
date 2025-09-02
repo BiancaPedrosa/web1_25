@@ -9,34 +9,20 @@ function loadDoc() {
   xhttp.send();
 }
 function loadQuiz(xml) {
-  var i;
-  var j;
-  //abre doc xml e le as questões
   var xmlDoc = xml.responseXML;
   var docX = xmlDoc.getElementsByTagName("question");
-  console.log(docX.length);
-
-  //cria o questionario 
   var questionario = document.createElement('ol');
   questionario.setAttribute("id", "questionary");
-
-  //para cada questão
-  for(i=0;i<docX.length;i++){
+  for(let i=0;i<docX.length;i++){
   	  let questao= document.createElement('li');
   	  questao.classList.add('question');
 	  questao.setAttribute('id','question'+(i+1));
 	  questao.setAttribute('style','display:none');
   	  questao.appendChild(document.createTextNode(docX[i].getElementsByTagName("text")[0].childNodes[0].nodeValue));
-  	  
-
-  	  //para cada questao criar as alternativas
   	  let respostas = document.createElement("ol");
   	  respostas.classList.add("answer");
-  	  
   	  let y = docX[i].getElementsByTagName("answer");
-
-  	  for (j=0; j<5; j++){
-  	  	//cria uma resposta
+  	  for (let j=0; j<5; j++){
 	  	let resposta = document.createElement('li');
 	  	let z = document.createElement("INPUT");
 		    z.setAttribute("type", "radio");
@@ -45,13 +31,11 @@ function loadQuiz(xml) {
 		let w = document.createTextNode(y[j].childNodes[0].nodeValue);
 		resposta.appendChild(z);
 		resposta.appendChild(w);
-		//adiciona cada resposta a respostas
-  	    respostas.appendChild(resposta); 
+  	   respostas.appendChild(resposta); 
 	  } 
-	  questao.appendChild(respostas);// adiciona respostas ao Item 
-	  questionario.appendChild(questao);	//adiciona o item a lista
+	  questao.appendChild(respostas);
+	  questionario.appendChild(questao);	
   }
-
- fQuest = document.getElementById("formQuestionary"); //o pai da lista
+ fQuest = document.getElementById("formQuestionary");
  fQuest.appendChild(questionario);
 }

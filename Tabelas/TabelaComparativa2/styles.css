@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    font-size: 16px;
+}
+
+.header th {
+    background-color: white;
+    border: none;
+}
+
+.header .title {
+    text-align: left;
+    vertical-align: middle;
+    width: 33%;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+    text-align: left;
+}
+
+h1 .ipad1 {
+    font-weight: bold;
+    color: black;
+    font-size: 32px;
+}
+
+h1 .ipad2 {
+    font-weight: bold;
+    color: black;
+    font-size: 32px;
+}
+
+.blog-credit {
+    font-size: 14px;
+    color: gray;
+    margin-top: -10px;
+    text-align: left;
+}
+
+.header img {
+    width: 150px;
+}
+
+.header img {
+    width: 150px;
+    height: 200px; /* Define uma altura fixa para as duas imagens */
+    object-fit: cover; /* Ajusta o tamanho mantendo a proporção */
+}

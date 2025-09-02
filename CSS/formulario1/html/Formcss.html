@@ -6,8 +6,8 @@
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<h1>HTML e CSS para Formulários</h1>
-	<form>
+	<h1>Fale Conosco</h1>
+	<form onsubmit="mensagem()">
 	<fieldset>	
 		<fieldset class="grupo">
 			<div class="campo">
@@ -37,7 +37,7 @@
 
 		<div class="campo">
 			<label for="telefone">Telefone</label>
-			<input type="tel" id="telefone" name="telefone" style="width: 20em" value="">
+			<input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" required>
 		</div>
 		
 		<fieldset class="grupo">
@@ -50,6 +50,8 @@
 				<select name="estado" id="estado">
 					<option value="">--</option>
 					<option value="PR">PR</option>
+					<option value="SP">SP</option>
+					<option value="RJ">RJ</option>
 				</select>
 			</div>
 		</fieldset>
@@ -70,5 +72,12 @@
 		<button class="botao submit" type="submit" name="submit">Enviar</button>	
 	</fieldset>
 	</form>
-</body>
+	<script>
+		function mensagem(){
+			nome = document.getElementById("nome").value;
+			alert("obrigado"+nome);
+		}
+		
+	</script>
+	</body>
 </html>

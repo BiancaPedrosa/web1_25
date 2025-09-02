@@ -1,0 +1,53 @@
+#Titulo {
+	/*layout*/
+	margin: 20px 10px 20px 10px; /*top right botton left*/
+	padding:  10px; /*área interna*/
+	/*bordas*/ 
+	border-width:10px;
+	border-style: groove;
+	/*fonte*/
+	font-family: arial;
+	font-size:40px;
+	text-align: center;
+	/*cores*/
+	background-color:  navy;
+	color: white;
+}
+
+#Menu {
+	/*layout*/
+	position: absolute;
+	margin: 10px;
+	width: 15%;
+	height: 500px;
+
+	/*cores*/
+	background-color: orange;
+	/*fontes*/
+	line-height: 2;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 0.9em;
+}
+
+#CONTEUDO {
+	/*layout*/
+	position: absolute;
+	right: 20px;
+	margin: 10px;
+	width: 80%;
+	height: 500px;
+	/*cores e fontes*/
+	color: blue;
+	background-color: #F0F0F0 ;
+	font-family: arial, helvetica, sans-serif;
+}
+
+
+
+.qualidade { color: red;}
+
+p {
+    margin: 10px;
+    padding: 5px;
+    line-height: 2;
+}

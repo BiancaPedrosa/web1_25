@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #ffffff; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.ipad-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ipad-images img {
+    max-width: 200px;
+    height: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th, 
+.comparison-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.comparison-table th {
+    background-color: #e6eaf2;
+    font-weight: bold;
+}
+
+.comparison-table tr:hover {
+    background-color: #e6f2ff; 
+}
+
+.check, .cross {
+    text-align: center;
+    font-weight: bold;
+}
+
+.check {
+    color: green;
+}
+
+.cross {
+    color: red;
+}

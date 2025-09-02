@@ -1,7 +1,5 @@
 function avalia(){
 	let points=0;
-		
-	//controlando as tentativas
 	if (typeof(Storage) !== "undefined") {
 		if (sessionStorage.attempt) {
 		  sessionStorage.attempt = Number(sessionStorage.attempt)+1;
@@ -18,11 +16,8 @@ function avalia(){
 	else {
 		document.getElementById("result").innerHTML = "seu navegador nao suporta web storage...";
 	}
-		
-	//recupera as questoes do documento 
 	questions=document.querySelectorAll(".question");
 
-	//para cada questao
 	for (i=0; i<questions.length;i++){
 
 		//obtem as respostas
@@ -40,9 +35,6 @@ function avalia(){
 	}
 	exibirQuestionario();
 	document.getElementById("result").innerHTML += " = "+ points+" pontos<br>";
-	
-	//armazenando os pontos no sessionStorage
 	let score = "score"+sessionStorage.attempt;
 	sessionStorage.setItem(score,points);
-		
 }
